@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Collaborator</title>
+      <link rel="stylesheet" type="text/scss" href="/Users/trevor/sei/projects/full-stack-front-end/assets/styles/index.scss">
+      <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+<div id="wrapper" class="wrapper">
+<div class='nav-holder'>
+      <h1 id="title" class='title'>Collaborator</h1>
+
+<nav class="nav-top nav navbar-default nav-buttons">
+  <ol>
+  <li id='new-user' class="mybutton signUpButton mybuttoncolor btn btn-info mr-1" value="New User" data-toggle="modal" data-target="#signUpModal">New User</li>
+  <li id='returning-user' class="mybutton signInButton  mybuttoncolor btn btn-info mr-1" value="Returning User" data-toggle="modal" data-target="#signInModal">Returning User</li>
+        <li id="postNewProject" class="mybutton btn btn-info mr-1" value="Post a project" data-toggle="modal" data-target="#newProjectModal">Post a project!</li>
+        <li id="getProjectsButton" class="mybutton btn btn-info mr-1">View all projects</li>
+        <li id="clearProjectsButton" class="mybutton btn btn-info mr-1">Clear view</li>
+        <li id="user-management" class="mybutton btn btn-info mr-1">Manage Account</li>
+        <li id="changePassword" class="mybutton btn btn-info mr-1" value="Change your password" data-toggle="modal" data-target="#changePasswordModal">Change your Password!</li>
+        <li id="sign-out" class="mybutton btn btn-info mr-1">Sign out!</li>
+        <li id="goBack" class="goBack mybutton btn btn-info mr-1">Go back</li>
+      </ol>
+      </nav>
+    </div>
+
+    <div class="signUpModal modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="signUpMessage" class="signUpcontent"></div>
+
+          <div class="modal-header">
+            <h5 class="signUpModalTitle modal-title" id="signUpModalTitle">Sign Up!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id='sign-up'>
+            <input class='signUpFields' type="email" name="credentials[email]" placeholder="email">
+            <input class='signUpFields' type="text" name="credentials[password]" placeholder="password">
+            <input class='signUpFields'type="text" name="credentials[password_confirmation]" placeholder="password_confirmation">
+            <input id='signUpButton' class="mybutton mybuttoncolor" type="submit" value="Sign Up!">
+              <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
+            </form>
+          </div>
+          <div class="modal-footer">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="signInModal modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="signInMessage" class="signIncontent"></div>
+
+          <div class="modal-header">
+            <h5 class="signInModalTitle modal-title" id="signInModalTitle">Sign In!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id='sign-in'>
+            <input class='sign-in-fields'type="email" name="credentials[email]" placeholder="email"
+            required>
+            <input class='sign-in-fields'type="text" name="credentials[password]" placeholder="password">
+            <input id='signInButton' class="mybutton mybuttoncolor" type="submit" value="Sign In!">
+            <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
+            </form>
+          </div>
+          <div class="modal-footer">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="changePasswordModal modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="changePasswordMessage" class="changePasswordContent"></div>
+
+          <div class="modal-header">
+            <h5 class="changePasswordModalTitle modal-title" id="changePasswordModalTitle">Change your password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="change-password">
+            <input type="password" name="passwords[old]" placeholder="old password">
+            <input type="password" name="passwords[new]" placeholder="new password">
+              <input type="submit" class="mybutton mybuttoncolor" value="Change Password!">
+            </form>
+          </div>
+          <div class="modal-footer">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="newProjectModal modal fade" id="newProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div id="newProjectMessage" class="newProjectContent"></div>
+
+      <div class="modal-header">
+        <h5 class="newProjectModalTitle modal-title" id="newProjectModalTitle">Post a project!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id='newProject'>
+          <input type="text" class="projectField" name="project[project_name]" placeholder="project name">
+          <input type="date" class="projectField" name="project[date]" placeholder="date created">
+          <input type="text" class="projectField" name="project[description]" placeholder="project description">
+          <input type="text" class="projectField" name="project[team_needs]" placeholder="team member requests">
+          <input type="email" class="projectField" name="project[contact_email]" placeholder="project lead email">
+          <input type="submit" class="projectField" value="Post!">
+        </form>
+      </div>
+      <div class="modal-footer">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about-me" class="about-me">
+<h1 id="about-me-header" class="about-me-header">Trevor Sosvielle: Full Time Developer</h1>
+<h1>Part-Time Secret Agent</h1>
+<p id="about-me-text" class="about-me-text">A full stack web developer with a passion for solving unique challenges and creating novel apps and webpages that create unique value for professional teams and the rest of the world alike.
+
+I’m passionate about new technologies, pc-gaming and border collies.</p>
+
+<p> While I’m always stiving to learn new languages and skills my current stack includes:
+
+<ul>
+<li>JavaScript</li>
+<li>React</li>
+<li>Node</li>
+<li>NoSQL (MongoDB, Mongoose)</li>
+<li>Ruby-on-Rails</li>
+<li>AJAX</li>
+<li>JQuery</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>Dom</li>
+<li>Git version control</li>
+</ul>
+
+<p>Please feel free to contact me for opportunities, collaborations or to request assistance!</p>
+<div class="social-media-images">
+<a class="my-github" href="https://github.com/tsosvielle"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" width="82" height="86" title="Credit to Dave Gandy" alt="GitHub"></a>
+<a class="my-linkedin" href="https://www.linkedin.com/in/trevor-sosvielle/"><img src="https://image.flaticon.com/icons/svg/174/174857.svg" width="82" height="86" title="LinkedInLogo" alt="LinkedIn"></a>
+</div>
+<img class="me" src="https://images.8tracks.com/avatar/i/007/298/841/66264.original.-802.jpg" alt="Trevor Sosvielle" height="300" width="300">
+</div>
+
+<div id="contact-me" class="contact-me">
+<h1 id="contact-me-header" class="contact-me-header">Let's chat!</h1>
+<form action="mailto:trevorsosvielle85@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+</div>
+
+<h1 id='message' class='message'></h1>
+
+<div id="content" class="content">
+</div>
+
+<div class="footer-wrapper">
+<footer id="site-footer" class="site-footer">
+<nav class="nav-bottom navbar-default nav-buttons">
+  <ol>
+  <li id='about-me-button' class="about-me mybutton mybuttoncolor btn btn-info mr-1">About Me</li>
+  <li id='contact-me-button' class="contact-me mybutton mybuttoncolor btn btn-info mr-1">Contact Me</li>
+</ol>
+      </nav>
+      <h1 class="footer-h1"> A demonstration project developed with love by Trevor Sosvielle</h1>
+</footer>
+</div>
+
+
+      </div>
+    </body>
+</html>

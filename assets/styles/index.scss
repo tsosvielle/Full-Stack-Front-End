@@ -1,0 +1,210 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: #CCE4EF;
+  background-image: url("https://images.pexels.com/photos/951240/pexels-photo-951240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  background-color: #F5F5F5;
+  width: 25%;
+  border-width: 5px;
+  border: solid;
+  border-color: darkgrey;
+  margin: 10px;
+}
+
+.about-me {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.about-me ul {
+  text-align: center;
+    list-style-position: inside;
+}
+.btn-save {
+background-color: green;
+}
+
+.card {
+  border-color: black;
+  border-width: thick;
+  -webkit-box-shadow: 18px 9px 0px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 18px 9px 0px -2px rgba(0,0,0,0.75);
+  box-shadow: 18px 9px 0px -2px rgba(0,0,0,0.75);
+  background-color: white;
+
+
+}
+.center-block {
+  float: none;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+}
+
+.contact-form-wrapper {
+  padding-bottom: 40px;
+}
+
+.contact-me {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.message {
+}
+
+.footer-h1 {
+  font-family: 'Courgette', cursive, sans-serif;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #F0F0F0;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.footer-wrapper {
+  display: inline-block;
+  float: none;
+}
+
+.form {
+}
+
+#me {
+ float: right;
+ padding: 0 20px 20px 0;
+ position: fixed;
+}
+
+.mybuttoncolor{
+  background-color: #669FFF;
+  color: white;
+
+}
+
+.mybutton {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  font-family: 'Acme', sans-serif;
+}
+
+.my-github {
+  margin-right: 60px;
+}
+
+.my-linkedin{
+  border-color: darkgrey;
+}
+
+.nav-bottom{
+    background-color: rgba( 255, 255, 255, 0.8 );
+    width: 100%;
+    display: inline-block;
+    float: none;
+    list-style:none;
+    margin: 0;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-left: 0;
+    text-align: center;
+
+}
+
+.nav-bottom li {
+    display:inline;
+    text-align: center;
+}
+
+.nav-top{
+    display: inline-block;
+    float: none;
+    list-style:none;
+    margin:0;
+    padding-right: 50px;
+    padding-left: 0;
+    text-align:center;
+
+}
+
+.nav-top li {
+    display:inline;
+    text-align: center;
+    padding-right: 40px
+
+}
+
+.nav-holder {
+  background-color: rgba( 255, 255, 255, 0.7 );
+}
+
+.site-footer {
+  height: 40px;
+  width: 100%;
+
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.social-media-images {
+  text-align: center;
+  list-style-position: inside;
+  padding: 10px;
+  margin: 30px;
+  justify-content: space-between;
+}
+
+.title {
+  padding-bottom: 15px;
+  padding-left: 50px;
+  background-color: #669FFF;
+  font-family: 'Acme', sans-serif;
+  color: #F2F1EB;
+}
+
+#message {
+  background-color: #F5F5F5;
+  width: 25%;
+  border-color: darkgrey;
+  margin: 10px;
+}
+
+#section-card {
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+
+}
+
+#title {
+
+}
